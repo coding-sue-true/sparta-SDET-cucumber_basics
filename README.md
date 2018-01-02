@@ -17,6 +17,18 @@ Feature: BBC Login
 ```
 With the tests written in [this repo](https://github.com/coding-sue-true/sparta-SDET-ui_testing-Capybara-POM) we reused them using Cucumber, which has a much better readability for stakeholders or even for someone who doesn't have any experience reading and writing code.
 
+We've also learnt how to export that data from the tests into an html file (other file formats are also available, you can choose whichever you want). The command for this, in your console, is:
+
+```
+cucumber -f html
+```
+Then you just have to copy and paste it in a new file on your directory.
+Or you can first create that file, and then just give it the route and it will save it directly into that file (I'm using the example for this repo):
+
+```
+cucumber -f html -o features/reports/test.html
+```
+
 ### How to Test
 1. Git clone this repo
 2. Go into the directory where this repo was cloned

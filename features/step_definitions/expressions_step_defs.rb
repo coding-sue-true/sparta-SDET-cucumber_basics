@@ -1,31 +1,31 @@
 Given("I provide an integer of {int}") do |int|
-  pending # Write code here that turns the phrase above into concrete actions
+  @captured_int = int
 end
 
 Then("I will be able to test the integer") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@captured_int).to eq 14
 end
 
 Given("I provide an float of {float}") do |float|
-  pending # Write code here that turns the phrase above into concrete actions
+  @captured_float = float
 end
 
 Then("I will be able to test the float") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@captured_float).to eq 21.5
 end
 
-Given("I provide specific word banana") do
-  pending # Write code here that turns the phrase above into concrete actions
+Given("I provide specific word {word}") do |word|
+  @word = word
 end
 
 Then("I will be able to test the word") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@word).to eq("banana")
 end
 
-Given("I provide specific something like cheese I can capture it using a regex") do
-  pending # Write code here that turns the phrase above into concrete actions
+Given(/I provide specific something like (.*) I can capture it using a regex/) do |regex|
+  @captured_regex = regex
 end
 
 Then("I will be able to test the captured regex") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@captured_regex).to eq("cheese")
 end
